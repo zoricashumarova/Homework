@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("Vnesi dva celi broja!\n");
+    printf("Vnesi tri celi broja!\n");
     int number1, number2, number3;
     scanf("%d", &number1);
     scanf("%d", &number2);
