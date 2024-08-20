@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+/*
+14. Напиши програма каде ќе се внеси низа од n елементи и ќе се направи
+трансформација т.ш местата ќе си ги заменат прв со последен елемент, втор со
+претпоследен итн. Резултатот да се отпечати.
+*/
+
+int main()
+{
+    int n;
+    cout << "Vnesi broj na elementi na niza" << endl;
+    cin>>n;
+
+    int niza[n];
+    for (int i=0; i<n; i++) {
+        int element;
+        cin>>element;
+        niza[i] = element;
+    }
+
+    cout<<"Prvicna niza: ";
+    for (int i=0; i<n; i++) {
+        cout<<niza[i]<<" ";
+    }
+
+    int first = 0;
+    int last = n-1;
+
+    while (first < last)
+    {
+        int temp = niza[first];
+        niza[first] = niza[last];
+        niza[last] = temp;
+
+        first++;
+        last--;
+    }
+
+
+    cout<<"Prevrtena niza: ";
+    for (int i=0; i<n; i++) {
+        cout<<niza[i]<<" ";
+    }
+    return 0;
+}
